@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8414FB54-B60D-4F9A-9505-B5E0B2D86C43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AndroidPDACommand</RootNamespace>
+    <AssemblyName>AndroidPDACommand</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Forguncy.Commands">
+      <HintPath>C:\Program Files\Forguncy 8\Website\designerBin\Forguncy.Commands.dll</HintPath>
+    </Reference>
+    <Reference Include="Forguncy.Commands.Design">
+      <HintPath>C:\Program Files\Forguncy 8\Website\designerBin\Forguncy.Commands.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Forguncy.Plugin">
+      <HintPath>C:\Program Files\Forguncy 8\Website\designerBin\GrapeCity.Forguncy.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Forguncy.ServerApi, Version=8.0.105.0, Culture=neutral, PublicKeyToken=967100671921c115, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Forguncy 8\Website\bin\GrapeCity.Forguncy.ServerApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Jiguang.JPush, Version=1.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Jiguang.JPush.1.2.5\lib\net45\Jiguang.JPush.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JPush_Info.cs" />
+    <Compile Include="JPushServerCommand.cs" />
+    <Compile Include="Device_Info.cs" />
+    <Compile Include="DothanPrinter_Device.cs" />
+    <Compile Include="DothanPrinter_DrawShape.cs" />
+    <Compile Include="DothanPrinter_DrawContent.cs" />
+    <Compile Include="DothanPrinter_Job.cs" />
+    <Compile Include="NfcReader.cs" />
+    <Compile Include="CloseApp.cs" />
+    <Compile Include="PDFPreview.cs" />
+    <Compile Include="Retrieve_LocalKv2.cs" />
+    <Compile Include="Retrieve_LocalKv.cs" />
+    <Compile Include="Get_Location.cs" />
+    <Compile Include="Get_ActionBar_Color.cs" />
+    <Compile Include="App_Info.cs" />
+    <Compile Include="Broadcast_Mode_ContinuousScanStop.cs" />
+    <Compile Include="Broadcast_Mode_ContinuousScanStart.cs" />
+    <Compile Include="Open_Builtin_Activity.cs" />
+    <Compile Include="Reset_LocalKv.cs" />
+    <Compile Include="DialPhoneCommand.cs" />
+    <Compile Include="Upsert_LocalKv.cs" />
+    <Compile Include="Set_Option_Menu.cs" />
+    <Compile Include="Set_Scanner_Options.cs" />
+    <Compile Include="Set_ActionBar_Style.cs" />
+    <Compile Include="Set_ActionBar_Color.cs" />
+    <Compile Include="Broadcast_Mode_Scan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\AndroidPDACommand.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PluginConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Resources\Icon_Scan.png" />
+    <None Include="Resources\PluginLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LPAPI-0.4.20181022.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Color.png" />
+    <Resource Include="Resources\Icon_Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Kv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_Nfc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon_PDF.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"E:\CODE\PluginTools\PluginPackageTool\bin\Release\PluginPackageTool.exe" "$(ProjectDir)\" "$(ConfigurationName)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
